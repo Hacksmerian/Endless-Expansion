@@ -1,3 +1,26 @@
-# Endless Expansion adds a variety of things to the game, they will all be listed below as they're developed and finished.
+Endless Expansion adds a variety of things to the game, they will all be listed below as they're developed and finished.
 
-# Adds several Korath related missions. (Complete the Sestor storyline first.)
+Adds several Korath related missions. (Complete the Sestor storyline first.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Changelog:
+
+1/9/2025:
+
+  Made minor grammar changes
+
+  Renamed missions and events in the backend for more distinction
+
