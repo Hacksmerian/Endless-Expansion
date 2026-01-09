@@ -16,7 +16,7 @@ Adds multiple Korath related missions. (Complete the Sestor storyline first.)
 
 
 
-Changelog:
+Changelog (Spoilers past this point):
 
 1/9/2025:
 
@@ -24,5 +24,7 @@ Changelog:
 
 	Renamed missions and events in the backend for more distinction (Thank you K.ai).
 	
-	Added Korath Refugee jobs for after the main story line.
+	Added Korath Rebels jobs for after the main story line.
+
+	Replaced "Korath Refugees" government with "Korath Rebels" government, "Korath Refugees" now only appear as the ship you rescue in the beginning.
 

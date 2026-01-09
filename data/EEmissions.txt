@@ -1,5 +1,5 @@
 # Korath Missions
-mission "EE Korath Refugee Mission 1"
+mission "EE Korath Rebels Mission 1"
     minor
     landing
     name "Investigate Korath Transmissions"
@@ -69,12 +69,12 @@ mission "EE Korath Refugee Mission 1"
         set "missiondelay"
         event "EEmissiondelaytimer" 3
 
-mission "EE Korath Refugee Mission 2"
+mission "EE Korath Rebels Mission 2"
     name "Meet with Rek"
     description "Rek has reached out to you, requesting you to visit her at <planet> as soon as possible."
     destination "Setar Fort"
     to offer
-        has "EE Korath Refugee Mission 1: done"
+        has "EE Korath Rebels Mission 1: done"
         not "missiondelay"
     on offer
         conversation
@@ -83,14 +83,14 @@ mission "EE Korath Refugee Mission 2"
     on accept
         event "korathtension"
 
-mission "EE Korath Refugee Mission 3"
+mission "EE Korath Rebels Mission 3"
     landing
     name "Visit the Quarg"
     description "Rek requested that you go to Kuwaru Efreti and speak with the Quarg on behalf of the Korath Refugees."
     source "Setar Fort"
     destination "Kuwaru Efreti"
     to offer
-        has "EE Korath Refugee Mission 2: done"
+        has "EE Korath Rebels Mission 2: done"
         not "missiondelay"
     on offer
         conversation
@@ -109,14 +109,14 @@ mission "EE Korath Refugee Mission 3"
             `   She then hands you a small box, similar to one of the satellites you distributed before. "This will record your conversation with the Quarg, as the Korath will want proof of the Quarg's words." You both say goodbye as you place the box in your pocket and you return to your ship.`
                 accept
 
-mission "EE Korath Refugee Mission 4"
+mission "EE Korath Rebels Mission 4"
     landing
     name "Quarg Negotiations"
     description "You've spoken with the Quarg, now return to <planet>."
     source "Kuwaru Efreti"
     destination "Setar Fort"
     to offer
-        has "EE Korath Refugee Mission 3: done"
+        has "EE Korath Rebels Mission 3: done"
         not "missiondelay"
     on offer
         conversation
@@ -150,13 +150,13 @@ mission "EE Korath Refugee Mission 4"
             `   Both the refugees and the Efret seem relieved at the Quarg's statements, but the refugees become uneasy when the Quarg states that it required them to forfeit their jump drives. Discussion begins between the two groups, with Rek attempting to act as a mediator. During a quick break in the discussion Rek looks back at you.`
             `   "Sorry <first>, this may take a while. Wait for me in the spaceport, I will come to you when we have decided on our next course of action." She then snapped back into being mediator just as the two groups began talking again.`
 
-mission "EE Korath Refugee Mission 5"
+mission "EE Korath Rebels Mission 5"
     name "Visit the Refugees"
     description "Rek has informed you that the Korath refugees have moved to <planet>, go there with her to hear the rest of their plan."
     source "Setar Fort"
     destination "Laki Nemparu"
     to offer
-        has "EE Korath Refugee Mission 4: done"
+        has "EE Korath Rebels Mission 4: done"
         not "missiondelay"
     on offer
         conversation
@@ -179,7 +179,7 @@ mission "EE Korath Refugee Mission 5"
     on complete
         dialog `You and Rek step off the ship, where she informs you that the Korath you will be speaking to are waiting for you in the spaceport.`
 
-mission "EE Korath Refugee Mission 6"
+mission "EE Korath Rebels Mission 6"
     name "Meet With the Korath refugees"
     description "The refugees you rescued want you to take one of their own back to Septar Lorku, where they will plan a revolt on the station."
     source "Laki Nemparu"
@@ -187,7 +187,7 @@ mission "EE Korath Refugee Mission 6"
     clearance `The Korath you brought with you quickly speak to the port authorities, who give you the coordinates of the side hangar you need to go to.`
     passengers 1
     to offer
-        has "EE Korath Refugee Mission 5: done"
+        has "EE Korath Rebels Mission 5: done"
         not "missiondelay"
     on offer
         conversation
@@ -220,18 +220,18 @@ mission "EE Korath Refugee Mission 6"
             set "missiondelay"
             event "EEmissiondelaytimer" 5
 
-mission "EE Korath Refugee Mission 7"
+mission "EE Korath Rebels Mission 7"
     name "Retrieve Rek"
     description "The Korath you helped before has contacted you, you should get Rek's help before heading to Septar Lorku."
     to offer
-        has "EE Korath Refugee Mission 6: done"
+        has "EE Korath Rebels Mission 6: done"
         not "missiondelay"
     destination "Setar Fort"
     on offer
         conversation
             `You're checking your diagnostics when you saw your console light up, with a holographic image of the Korath you took to Septar Lorku. It speaks in their language for a moment before the message cuts to an image of the space station and an arrow pointing at the same side dock you had used last time. It seems they need your help again, you should go get Rek to help translate.`
                 accept
-mission "EE Korath Refugee Mission 8"
+mission "EE Korath Rebels Mission 8"
     landing
     name "The Calm"
     description "Now that you have Rek with you, it's time for you to go to Septar Lorku and see what needs to be done next."
@@ -239,7 +239,7 @@ mission "EE Korath Refugee Mission 8"
     destination "Septar Lorku"
     clearance
     to offer
-        has "EE Korath Refugee Mission 7: done"
+        has "EE Korath Rebels Mission 7: done"
         not "missiondelay"
     on offer
         conversation
@@ -262,15 +262,15 @@ mission "EE Korath Refugee Mission 8"
     on visit "Septar Lorku"
         dialog `You attempt to dock, but the nearby hostile ships prevent you from getting close to the station. You'll need take them out first.`
 
-mission "EE Korath Refugee Mission 9"
+mission "EE Korath Rebels Mission 9"
     landing
     name "The Storm"
-    description "The Korath refugees need you to fight off the incoming Korath ships while they focus on securing the station."
+    description "The Korath Rebels need you to fight off the incoming Korath ships while they focus on securing the station."
     source "Septar Lorku"
     destination "Septar Lorku"
     clearance
     to offer
-        has "EE Korath Refugee Mission 8: done"
+        has "EE Korath Rebels Mission 8: done"
         not "missiondelay"
     on offer
         conversation
@@ -302,18 +302,18 @@ mission "EE Korath Refugee Mission 9"
                 "Rano'erek" 10
     on complete
         event "korathrefugeetakeover"
-mission "EE Korath Refugee Mission 10"
+mission "EE Korath Rebels Mission 10"
     landing
     name "Take Rek Home"
     description "With your work done in Kor Fel'tar, it's time to drop Rek back off to the Kor Efret on <planet>."
     source "Septar Lorku"
     destination "Setar Fort"
     to offer
-        has "EE Korath Refugee Mission 9: done"
+        has "EE Korath Rebels Mission 9: done"
         not "missiondelay"
     on offer
         conversation
-            `As you enter through the main hangar, hundreds of Korath are gathered to greet you. The Korath Refugee leader comes to greet you at your ship hatch. Rek stands beside you and translates.`
+            `As you enter through the main hangar, hundreds of Korath are gathered to greet you. The Korath rebel leader comes to greet you at your ship hatch. Rek stands beside you and translates.`
             `   "Thank you human, for assisting us in fighting against the Exiles. This is just one of many battles in the future for us, and the Exiles will not take this blow lightly. But for now, let us celebrate." The Korath's words are followed by the crowd around you letting out barks of celebration.`
             `   While once you and Rek have finished celebrating with the Korath, you both return to your ship. Time to take her home.`
                 accept

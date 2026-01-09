@@ -7,8 +7,8 @@ fleet "deathfleet"
 		"Archon" 5
 		"vyu-Ir" 1
 		"Quarg Skylark" 10
-fleet "Korath Raid (Refugee)"
-	government "Korath Refugees"
+fleet "Korath Raid (Rebels)"
+	government "Korath Rebels"
 	names "korath"
 	fighters
 		names "korath"
@@ -21,8 +21,8 @@ fleet "Korath Raid (Refugee)"
 	variant 1
 		"Palavret (Blaze)"
 		"'olofez" 2
-fleet "Korath Miners (Refugee)"
-	government "Korath Refugees"
+fleet "Korath Miners (Rebels)"
+	government "Korath Rebels"
 	names "korath"
 	fighters
 		names "korath"
@@ -32,8 +32,8 @@ fleet "Korath Miners (Refugee)"
 	variant
 		"Rano'erek"
 		"'olofez (Digger)" 4
-fleet "Korath Civilian Large (Refugee)"
-	government "Korath Refugees"
+fleet "Korath Civilian Large (Rebels)"
+	government "Korath Rebels"
 	names "korath"
 	fighters
 		names "korath"
