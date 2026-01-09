@@ -292,7 +292,7 @@ mission "EE Korath Rebels Mission 9"
         on kill
             dialog `You've fended off the invading Korath, you can now land and check on the station's progress.`
     npc
-        government "Korath Refugees"
+        government "Korath Rebels"
         personality heroic staying escort
         system "Kor Fel'tar"
         fleet
