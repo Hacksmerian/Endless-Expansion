@@ -208,7 +208,7 @@ mission "EE Korath Refugee Mission 6"
                 `   "Sounds too risky, sorry."`
                     decline
             label accept
-            `   You bring the single Korath on to your ship and him to his room while you finish your final checks.`
+            `   You bring the single Korath on to your ship and show him to his room, which he seems to appreciate.`
                 accept
     on decline
         conversation
@@ -229,7 +229,7 @@ mission "EE Korath Refugee Mission 7"
     destination "Setar Fort"
     on offer
         conversation
-            `You're checking your diagnostics when you saw your console light up, with an holographic image of the Korath you took to Septar Lorku. It speaks in their language for a moment before the message cuts to an image of the space station and an arrow pointing at the same side dock you had used last time. It seems they need your help again, you should go get Rek to help translate.`
+            `You're checking your diagnostics when you saw your console light up, with a holographic image of the Korath you took to Septar Lorku. It speaks in their language for a moment before the message cuts to an image of the space station and an arrow pointing at the same side dock you had used last time. It seems they need your help again, you should go get Rek to help translate.`
                 accept
 mission "EE Korath Refugee Mission 8"
     landing
@@ -274,7 +274,7 @@ mission "EE Korath Refugee Mission 9"
         not "missiondelay"
     on offer
         conversation
-            `As you leave your ship you and Rek are assaulted by a wave of heat that you hadn't been exposed to on your previous visit, and it makes you want to go back in your ship. As you're both coping with the sudden temperature difference, the Korath you had helped before approached you with several other armed Korath following behind it.`
+            `As you leave your ship you and Rek are assaulted by a wave of heat that you hadn't been exposed to on your previous visit, and it makes you want to go back in your ship. As you're both coping with the sudden temperature difference, the Korath you had helped before approaches you with several other armed Korath following behind it.`
             `   "The takeover has already begun, the ships you destroyed outside were attempting to provide reinforcements to the station." Rek quickly translates as alarms start going off throughout the station. The Korath then quickly points to your ship, "there are more enemies coming, please go and fend them off while we secure the rest of the station."`
                 launch
     on visit "Septar Lorku"

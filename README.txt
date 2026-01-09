@@ -20,7 +20,7 @@ Changelog:
 
 1/9/2025:
 
-  Made minor grammar changes
+  Made minor grammar changes (Thank you K.ai)
 
-  Renamed missions and events in the backend for more distinction
+  Renamed missions and events in the backend for more distinction (Thank you K.ai)
 
