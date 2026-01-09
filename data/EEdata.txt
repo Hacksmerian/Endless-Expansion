@@ -61,7 +61,7 @@ outfitter "Harrison Basics"
 	"Extreme Temperature Insulation"
 	"Non-Corrosive Lining"
 
-outfitter "Korath Refugees"
+outfitter "Korath Rebels"
 	"Banisher Grav-Turret"
 	"Fire-Lance"
 	"Grab-Strike Turret"
@@ -112,12 +112,12 @@ event "EEkorathtension"
 event "EEkorathrefugeetakeover"
 	system "Kor Fel'tar"
 		government "Korath Rebels"
-		add fleet "Korath Raid (Refugee)" 2000
-		add fleet "Korath Miners (Refugee)" 1000
-		add fleet "Korath Civilian Large (Refugee)" 1500
+		add fleet "Korath Raid (Rebels)" 2000
+		add fleet "Korath Miners (Rebels)" 1000
+		add fleet "Korath Civilian Large (Rebels)" 1500
 	planet "Septar Lorku"
 		add outfitter "Korath Basics"
-		add outfitter "Korath Refugees"
+		add outfitter "Korath Rebels"
 		add outfitter "Firestorm Torpedo Restock"
 		add outfitter "Firelight Restock"
 		add outfitter "Piercer Missile Restock"
