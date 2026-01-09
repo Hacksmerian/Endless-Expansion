@@ -1,5 +1,5 @@
 government "Debug"
-	swizzle 2
+	swizzle 0
 	color "governments: Hai"
 	"player reputation" 0
 	"fine" 0

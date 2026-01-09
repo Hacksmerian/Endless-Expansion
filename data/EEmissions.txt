@@ -130,8 +130,11 @@ mission "Korath Refugee Mission 4"
                     goto peace
             label violence
             `   "Perhaps, but one must consider the ramifications of the toppling of regimes. Species that are young oft overlook peripheral consequences and motivations." The Quarg then stands from its seat.`
+                goto next
             label peace
             `   "Perhaps, and it is our hope that the Exiles finally journey to the path of wisdom like the Efreti. However, much work still remains to be done for this to transpire." The Quarg then stands from its seat.`
+                goto next
+            label next
             `   "The Quarg will not interfere with the migration of any Exile refugees, so long as the refugees do nothing to cause the Efreti harm, and henceforth forsake their knowledge and possession of their jump drives." And with that, the Quarg lead you back to your ship and send you on your way.`
                 accept
     on complete
@@ -144,7 +147,178 @@ mission "Korath Refugee Mission 4"
             label next
             `   "We suspected as much," she said as she took the box from you, "come, we must show them the contents of the recording."`
             `   The Korath lead you and Rek to a large meeting room, where Korath from the Efret and a few you recognize from the refugee group sit. Rek speaks to them in their language for a moment before placing the box on the table, hooking it to the console in the center of the table and played the recording.`
-            `   The both the refugees and the Efret seem relieved at the Quarg's statements, but the refugees become uneasy when the Quarg states that it required them to forfeit their jump drives. Discussion begins between the two groups, with Rek attempting to act as a mediator. During a quick break in the discussion Rek looks back at you.`
+            `   Both the refugees and the Efret seem relieved at the Quarg's statements, but the refugees become uneasy when the Quarg states that it required them to forfeit their jump drives. Discussion begins between the two groups, with Rek attempting to act as a mediator. During a quick break in the discussion Rek looks back at you.`
             `   "Sorry <first>, this may take awhile. Wait for me in the spaceport, I will come to you when we have decided on our next course of action." She then snapped back into being mediator just as the two groups began talking again.`
 
-            
+mission "Korath Refugee Mission 5"
+    name "Visit the Refugees"
+    description "Rek has informed you that the Korath Refugees have moved to <planet>, go there with her to hear the rest of their plan."
+    source "Setar Fort"
+    destination "Laki Nemparu"
+    to offer
+        has "Korath Refugee Mission 4: done"
+        not "missiondelay"
+    on offer
+        conversation
+            `Several hours pass before Rek finally finds you inside of a diner.`
+            `   "Good news <first> <last>," she then tries to sit in the booth you're in but finds that the seats weren't designed with large birds in mind. She clacks her beak in annoyance before giving up and just standing. "The Efret and the refugees have reached an agreement."`
+            choice
+                `   "That's great, what is it?"`
+            `   Her shoulders lower slightly, making an expression you similar to a human sigh. "The refugees agree to have any of their people that enter this space relinquish their jump drives, but they do not intend on moving everyone here. They still want to fight against the other Korath and they are requesting your assistance in this fight."`
+            choice
+                `   "Sure, I'd be happy to help."`
+                    goto accept
+                `   "I don't think I should get involved in all of this."`
+                    goto decline
+            label decline
+            `   She nods her head understandingly, "I will inform them that they will need to find someone else." She said before quickly leaving the diner.`
+                decline
+            label accept
+            `"The refugees have moved to <planet>, there they will inform us on the rest of their plan." She said as you pay for your food and leave for your ship with her.`
+                accept
+    on complete
+        dialog `You and Rek step off the ship, where she informs you that the Korath you will be speaking to are waiting for you in the spaceport.`
+
+mission "Korath Refugee Mission 6"
+    name "Meet With the Korath Refugees"
+    description "The refugees you rescued want you to take one of their own back to Septar Lorku, where they will plan a revolt on the station."
+    source "Laki Nemparu"
+    destination "Septar Lorku"
+    clearance `The Korath you brought with you quickly speak to the port authorities, which give you the coordinates to the side hangar you need to go to.`
+    passengers 1
+    to offer
+        has "Korath Refugee Mission 5: done"
+        not "missiondelay"
+    on offer
+        conversation
+            `You enter the spaceport, where several Korath wait for you with Rek. The one standing next to her begins to speak, and Rek begins translating for you.`
+            `   "Honored warrior, we wish to request your aid once again."`
+            choice
+                `   "I'd be happy to help, what exactly did you need me for?"`
+                    goto next
+                `   "I'll need to hear a plan before I make a decision."`
+                    goto next
+            label next
+            `   "We wish for you to take me to <planet>, from there we will stage a rebellion against the Exiles."`
+            `   "How am I supposed to get on the station when I can't even be in the system without being shot at?" You ask. When Rek translates this, a few of the Korath behind her make a noise that seems eerily close to snickering.`
+            `   "I will hail them from your ship, many on Septar Lorku are sympathetic to our cause and the ones in the control room are no different. We will dock at a side hangar, where we will part ways until we are ready to strike."`
+            choice
+                `   "Alright, I'm ready to go then."`
+                    goto accept
+                `   "Sounds too risky, sorry."`
+                    decline
+            label accept
+            `   You bring the single Korath on to your ship and him to his room while you finish your final checks.`
+                accept
+    on decline
+        conversation
+            `Rek translates this, and the Korath around her seem disappointed before slowly moving away and huddling together, presumably to discuss their next course of action.`
+    on complete
+        conversation
+            `You land in the hangar that was specified to you, where several Korath are armed and waiting. When your ship hatch opens, the Korath you were transporting leaves first, which seems to put the other Korath at ease as they lower their weapons. They speak for a minute in their language before the Korath you were with holds up several fingers. Seemingly it is trying to tell you how long you will have to wait. With nothing else to do, you get back on your ship and try to leave before you get spotted by more hostile Korath.`
+                launch
+            set "missiondelay"
+            event "missiondelaytimer" 5
+
+mission "Korath Refugee Mission 7"
+    name "Retrieve Rek"
+    description "The Korath you helped before has contacted you, you should get Rek's help before heading to Septar Lorku."
+    to offer
+        has "Korath Refugee Mission 6: done"
+        not "missiondelay"
+    destination "Setar Fort"
+    on offer
+        conversation
+            `You were checking your diagnostics when you saw your console light up, with an holographic image of the Korath you took to Septar Lorku. It speaks in their language for a moment before the message cuts to an image of the space station and an arrow pointing at the same side dock you had used last time. It seems they need your help again, you should go get Rek to help translate.`
+                accept
+mission "Korath Refugee Mission 8"
+    landing
+    name "The Calm"
+    description "Now that you have Rek with you, it's time for you to go to Septar Lorku and see what needs to be done next."
+    source "Setar Fort"
+    destination "Septar Lorku"
+    clearance
+    to offer
+        has "Korath Refugee Mission 7: done"
+        not "missiondelay"
+    on offer
+        conversation
+            `As you land you quickly message Rek to meet you at your ship. After waiting awhile, she shows up while being followed by a single Korath. You quickly explain the situation as she listens.`
+            `   "So the time has come for the Korath civil war hm? Very well, I will accompany you. Hopefully their plan is sound." She said before stepping on to your ship.`
+                accept
+    on enter "Kor Fel'tar"
+        dialog `There are several hostile Korath in the system, you should take them out before attempting to dock at the station.`
+    npc kill
+        government "Korath"
+        personality nemesis heroic staying target plunders
+        system "Kor Fel'tar"
+        fleet
+            names "korath"
+            variant
+                "Palavret" 3
+                "Rano'erek" 2
+        on kill
+            dialog "You have destroyed the hostile Korath, now you can dock on <planet>."
+    on visit "Septar Lorku"
+        dialog `You attempt to dock, but the nearby hostile ships prevent you from getting close to the station. You'll need take them out first.`
+
+mission "Korath Refugee Mission 9"
+    landing
+    name "The Storm"
+    description "The Korath Refugees need you to fight off the incoming Korath ships while they focus on securing the station."
+    source "Septar Lorku"
+    destination "Septar Lorku"
+    clearance
+    to offer
+        has "Korath Refugee Mission 8: done"
+        not "missiondelay"
+    on offer
+        conversation
+            `As you leave your ship you and Rek are assaulted by a wave of heat that you hadn't been exposed to on your previous visit, and it makes you want to go back in your ship. As you're both coping with the sudden temperature difference, the Korath you had helped before approached you with several other armed Korath following behind it.`
+            `   "The takeover has already begun, the ships you destroyed outside were attempting to provide reinforcements to the station." Rek quickly translates as alarms start going off throughout the station. The Korath then quickly points to your ship, "there are more enemies coming, please go and fend them off while we secure the rest of the station."`
+                launch
+    on visit "Septar Lorku"
+        dialog `You land but haven't taken care of the invading Korath yet. You should take off and finish them off quickly.`
+            launch
+    npc kill
+        government "Korath"
+        personality heroic staying target disables
+        system "Kor Fel'tar"
+        fleet
+            names "korath"
+            variant
+                "Palavret" 10
+                "Rano'erek" 15
+        on kill
+            dialog `You've fended off the invading Korath, you can now land and check on the station's progress.`
+    npc
+        government "Korath Refugees"
+        personality heroic staying escort
+        system "Kor Fel'tar"
+        fleet
+            names "korath"
+            variant
+                "Palavret" 10
+                "Rano'erek" 10
+    on complete
+        event "korathrefugeetakeover"
+mission "Korath Refugee Mission 10"
+    landing
+    name "Take Rek Home"
+    description "With your work done in Kor Fel'tar, it's time to drop Rek back off to the Kor Efret on <planet>."
+    source "Septar Lorku"
+    destination "Setar Fort"
+    to offer
+        has "Korath Refugee Mission 9: done"
+        not "missiondelay"
+    on offer
+        conversation
+            `As you enter through the main hangar, hundreds of Korath are gathered to greet you. The Korath Refugee leader comes to greet you at your ship hatch. Rek stands beside you and translates.`
+            `   "Thank you human, for assisting us in fighting against the Exiles. This is just one of many battles in the future for us, and the Exiles will not take this blow lightly. But for now, let us celebrate." The Korath's words are followed by the crowd around you letting out barks of celebration.`
+            `   While once you and Rek have finished celebrating with the Korath, you both return to your ship. Time to take her home.`
+                accept
+    on complete
+        payment 3840000
+        conversation
+            `As you land, you and Rek step out of your ship.`
+            `   "That was quite the trip, <first> <last>. I will report what transpired to the Kor Efret, until we meet again." She says as you say your goodbyes. A few hours later, you get a notification that the Efret government had paid you <payment> for your help with the Korath Refugees.`
