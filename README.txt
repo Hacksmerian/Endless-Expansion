@@ -28,3 +28,4 @@ Changelog (Spoilers past this point):
 
 	Replaced "Korath Refugees" government with "Korath Rebels" government, "Korath Refugees" now only appear as the ship you rescue in the beginning.
 
+	Added Kor Efret government jobs that send passengers/supplies to Korath Rebels planets. Only available after the main storyline.
