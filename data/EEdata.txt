@@ -98,7 +98,7 @@ outfitter "Debug"
 
 # Events
 
-event "missiondelaytimer"
+event "EEmissiondelaytimer"
 	# Used to put delays between missions or to delay mission requests. Input number equals days needed to pass.
 	clear "missiondelay"
 
@@ -112,9 +112,9 @@ event "korathtension"
 event "korathrefugeetakeover"
 	system "Kor Fel'tar"
 		government "Korath Refugees"
-		add fleet "Korath Raid (Refugee)"
-		add fleet "Korath Miners (Refugee)"
-		add fleet "Korath Civilian Large (Refugee)"
+		add fleet "Korath Raid (Refugee)" 2000
+		add fleet "Korath Miners (Refugee)" 1000
+		add fleet "Korath Civilian Large (Refugee)" 1500
 	planet "Septar Lorku"
 		add outfitter "Korath Basics"
 		add outfitter "Korath Refugees"

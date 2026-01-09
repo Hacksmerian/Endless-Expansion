@@ -1,6 +1,6 @@
 fleet "deathfleet"
 	government "Debug"
-	names quarg
+	names "quarg"
 	variant 100
 		"Wardragon"
 		"Shooting Star"
