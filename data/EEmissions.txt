@@ -81,7 +81,7 @@ mission "EE Korath Rebels Mission 2"
             `As you're leaving a booth advertising some bogus turret expansion you receive a message on your PDA. It's a message from Rek, requesting that you come to <planet> to assist her with the Korath Refugees.`
                 accept
     on accept
-        event "korathtension"
+        event "EEkorathtension"
 
 mission "EE Korath Rebels Mission 3"
     landing
@@ -301,7 +301,7 @@ mission "EE Korath Rebels Mission 9"
                 "Palavret" 10
                 "Rano'erek" 10
     on complete
-        event "korathrefugeetakeover"
+        event "EEkorathrefugeetakeover"
 mission "EE Korath Rebels Mission 10"
     landing
     name "Take Rek Home"

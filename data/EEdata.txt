@@ -102,16 +102,16 @@ event "EEmissiondelaytimer"
 	# Used to put delays between missions or to delay mission requests. Input number equals days needed to pass.
 	clear "missiondelay"
 
-event "korathtension"
+event "EEkorathtension"
 	government "Korath Refugees"
 		"attitude toward"
 			"Korath" -.01
 	government "Korath Exiles"
 		"attitude toward"
 			"Korath Refugees" -.01
-event "korathrefugeetakeover"
+event "EEkorathrefugeetakeover"
 	system "Kor Fel'tar"
-		government "Korath Refugees"
+		government "Korath Rebels"
 		add fleet "Korath Raid (Refugee)" 2000
 		add fleet "Korath Miners (Refugee)" 1000
 		add fleet "Korath Civilian Large (Refugee)" 1500
