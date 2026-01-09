@@ -54,3 +54,46 @@ mission "Korath Rebels: Medical Transport 1"
     on complete
         payment 120000 200
         dialog "When the ship door opens, several Efret come aboard to help unload the injured Korath. Once your ship is empty to get notified that the Efret government has payed you <payment>."
+
+mission "Korath Efret: Korath Rebel Aid 1"
+    name "Supplies to <destination>"
+    job
+    repeat
+    substitutions
+        "<aid>" "Medical Supplies"
+        "<aid>" "Food Supplies"
+            random < 60
+        "<aid>" "Emergency Supplies"
+            random < 30
+    description "The Efret government wants to send <tons> of <aid> to <destination>, they are willing to pay <payment>."
+    source
+        government "Kor Efret"
+    destination
+        government "Korath Rebels"
+    cargo 10 80
+    to offer
+        has "EE Korath Rebels Mission 10: done"
+        random < 60
+    on visit
+        dialog phrase "generic cargo on visit"
+    on complete
+        payment 60000 200
+        dialog "A few rebels quickly begin unload the <aid>. When they've finished you receive a notification that the Efret government has paid you <payment>"
+mission "Korath Efret: Doctor Transport 1"
+    name "Doctors to <destination>"
+    job
+    repeat
+    description "The Efret government are requesting transport for <bunks> doctors to <destination>. They are able to pay <payment> in exchange."
+    source
+        government "Kor Efret"
+    destination
+        government "Korath Rebels"
+    passengers 2 30
+    to offer
+        has "EE Korath Rebels Mission 10: done"
+        random < 60
+    on visit
+        dialog phrase "generic passenger on visit"
+    on complete
+        payment 90000 200
+        dialog "You open the hatch to your ship and the Korath you were transporting quickly meet up with nearby rebels. You receive a notification that the Efret government has paid you <payment>"
