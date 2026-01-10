@@ -2,6 +2,8 @@ Endless Expansion adds a variety of things to the game, they will all be listed 
 
 Adds multiple Korath related missions. (Complete the Sestor storyline first.)
 
+Adds new Korath faction and Korath related jobs.
+
 
 
 
