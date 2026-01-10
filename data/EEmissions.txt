@@ -322,3 +322,17 @@ mission "EE Korath Rebels Mission 10"
         conversation
             `As you land, you and Rek step out of your ship.`
             `   "That was quite the trip, <first> <last>. I will report what transpired to the Kor Efret, until we meet again." She says as you say your goodbyes. A few hours later, you get a notification that the Efret government had paid you <payment> for your help with the Korath Refugees.`
+
+mission "EE Korath Rebels Culture 1"
+    minor
+    invisible
+    source
+        government "Korath Rebels"
+        random < 10
+    to offer
+        has "EE Korath Rebels Mission 10: done"
+    on offer
+        conversation
+            `While walking through the massive hangar and looking for some relief from the heat of the station, you see a group of Korath pushing a hovering flatbed full of broken jump drives. It seems the Korath are taking the Quarg's conditions seriously.`
+                decline
+        set "EE Korath Rebels Jump Drive Disposal Jobs"

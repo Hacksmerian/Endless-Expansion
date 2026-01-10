@@ -97,3 +97,41 @@ mission "Korath Efret: Doctor Transport 1"
     on complete
         payment 90000 200
         dialog "You open the hatch to your ship and the Korath you were transporting quickly meet up with nearby rebels. You receive a notification that the Efret government has paid you <payment>"
+mission "Korath Rebels: Broken Jump Drive Disposal"
+    name "Broken Drives to <destination>"
+    job
+    repeat
+    description "The Korath Rebels want to dispose of their broken jump drives. They will pay you <payment> to take them to <destination>"
+    source 
+        government "Korath Rebels"
+    destination
+        government "Quarg (Kor Efret)"
+    cargo 40 200
+    to offer
+        has "EE Korath Rebels Jump Drive Disposal Jobs"
+        random < 60
+    on visit
+        dialog phrase "generic cargo on visit"
+    on complete
+        payment 120000
+        dialog "You land and find a Quarg who seemed to be in charge of taking your delivery. As the jump drives are unloaded you notice that the Quarg's scales have changed color ever so slightly, it seems pleased. Before you have a chance to think about it the Quarg takes the jump drives away and you're notified of your payment of <payment>"
+
+mission "Korath Rebels: Jump Drive Disposal"
+    name "Jump Drives to <destination>"
+    job
+    repeat
+    description "The Korath Rebels have confiscated jump drives off of their own members and need them to be disposed of. They will pay you <payment> to take them to <destination>"
+    source 
+        government "Korath Rebels"
+    destination
+        government "Quarg (Kor Efret)"
+    cargo 40 200
+    to offer
+        has "EE Korath Rebels Jump Drive Disposal Jobs"
+        random < 60
+    on visit
+        dialog phrase "generic cargo on visit"
+    on complete
+        payment 260000
+        dialog "You land and find a Quarg who seemed to be in charge of taking your delivery. As the jump drives are unloaded you notice that the Quarg's scales have changed color ever so slightly, it seems pleased. Before you have a chance to think about it the Quarg takes the jump drives away and you're notified of your payment of <payment>"
+    

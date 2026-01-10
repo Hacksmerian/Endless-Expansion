@@ -73,3 +73,10 @@ fleet "Korath Civilian Large (Rebels)"
 	variant 2
 		"Rai'alorej"
 		"'olofez (Expeller)" 2
+
+fleet "Duofez (Miner)"
+	government "Korath Efret"
+	names "korath"
+	personality mining harvests plunders timid
+	variant
+		"'Duofez (Miner)" 4
