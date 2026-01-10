@@ -322,4 +322,3 @@ mission "EE Korath Rebels Mission 10"
         conversation
             `As you land, you and Rek step out of your ship.`
             `   "That was quite the trip, <first> <last>. I will report what transpired to the Kor Efret, until we meet again." She says as you say your goodbyes. A few hours later, you get a notification that the Efret government had paid you <payment> for your help with the Korath Refugees.`
-

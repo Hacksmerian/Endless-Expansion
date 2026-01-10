@@ -56,6 +56,36 @@ outfit "Turret Mount Expansion"
 	"turret mounts" 1
 	description `This attachment isn't recommended by your ship's manufacturer, but that never stopped you from strapping alien technology to your ship before so why not a full hull modification?`
 
+outfit "Twin Digger Mining Beam"
+	category "Guns"
+	series "Guns"
+	index 04070
+	cost 629000
+	thumbnail "EEoutfit/twin_digger"
+	"mass" 20
+	"outfit space" -20
+	"weapon capacity" -18
+	"asteroid scan power" 10
+	"gun ports" -1
+	weapon
+		sprite "projectile/digger thin"
+			"frame rate" 20
+		sound "korath digger"
+		"hit effect" "korath digger hit"
+		"inaccuracy" 0.1
+		"velocity" 480
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 4.2
+		"firing heat" 8.6
+		"shield damage" 0.9
+		"hull damage" 1.8
+		"minable damage" 12.2
+		"prospecting" 4
+		"disruption damage" .12
+	# Change description
+	description `"Bigger is better they say," and that's exactly what went through the head of the Korath engineer who made this. It's a bit bulkier than the regular digger mining beam, but if you've got the outfit space to spare, it's probably not too bad a choice.`
+
 # Outfitters
 outfitter "Harrison Basics"
 	"Extreme Temperature Insulation"
@@ -73,6 +103,8 @@ outfitter "Korath Rebels"
 	"Thruster (Comet Class)"
 	"Thruster (Planetary Class)"
 	"Generator (Furnace Class)"
+	"Plasma Core"
+	"Double Plasma Core"
 	"Triple Plasma Core"
 	"Small Heat Shunt"
 	"Large Heat Shunt"
@@ -95,6 +127,51 @@ outfitter "Debug"
 	"Extreme Temperature Insulation"
 	"Non-Corrosive Lining"
 	"Turret Mount Expansion"
+
+# Ships
+
+ship "'Duofez"
+	# Ship Design Credit: K.ai
+	plural "'Duofezes"
+	sprite "EEship/duofez"
+	thumbnail "EEship/duofez_thumbnail"
+	attributes
+		category "Fighter"
+		"cost" 871000
+		"shields" 2000
+		"hull" 1200
+		"required crew" 1
+		"bunks" 1
+		"mass" 60
+		"drag" .9
+		"cargo space" 15
+		"heat dissipation" .9
+		"outfit space" 114
+		"weapon capacity" 47
+		"engine capacity" 30
+		weapon
+			"blast radius" 48
+			"shield damage" 320
+			"hull damage" 160
+			"hit force" 480
+	outfits
+		"Fire-Lance" 2
+		"Generator (Furnace Class)"
+		"Small Heat Shunt"
+		"Thermal Repeater Rifle"
+		"Thruster (Asteroid Class)"
+		"Steering (Asteroid Class)"
+	engine -7 23
+	engine 7 23
+	gun 0 -28 "Fire-Lance"
+	gun 0 -20 "Fire-Lance"
+	explode "tiny explosion" 20
+	description "The 'Duofez was designed by the Kor Efret as pseudo interceptors, commonly used for in atmosphere defense and astroid mining within a single system. While slower than its 'olofez cousin, it makes up for it with cargo space and an additional weapons port."
+	description "	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay."
+
+
+
+# Shipyards
 
 # Events
 
@@ -122,3 +199,4 @@ event "EEkorathrefugeetakeover"
 		add outfitter "Firelight Restock"
 		add outfitter "Piercer Missile Restock"
 		add outfitter "Cluster Mine Restock"
+
