@@ -20,7 +20,8 @@ Adds new Korath faction and Korath related jobs.
 
 Changelog (Spoilers past this point):
 
-1/9/2025:
+v.0.1.15
+1/9/2026:
 
 	Made minor grammar changes (Thank you K.ai).
 
@@ -33,7 +34,8 @@ Changelog (Spoilers past this point):
 	Added Kor Efret government jobs that send passengers/supplies to Korath Rebels planets. Only available after the main storyline.
 
 
-1/10/2025:
+v.0.1.16
+1/10/2026:
 
 	Added a variant of the Broken Jump Drive with a changed description to fit the plugin's story. It can be found in the outfitter in the Korath Rebel occupied Septar Lorku
 
@@ -41,3 +43,7 @@ Changelog (Spoilers past this point):
 
 	Added two new jobs to the Korath Rebels faction (requires you to get the related culture mission first)
 
+v.0.1.17
+1/10/2026
+
+	Implemented the 'Duofez (model made by K.ai), it is purchasable from the Kor Efret.

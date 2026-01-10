@@ -147,7 +147,9 @@ ship "'Duofez"
 	# Ship Design Credit: K.ai
 	plural "'Duofezes"
 	sprite "EEship/duofez"
+		"scale" 0.5
 	thumbnail "EEship/duofez_thumbnail"
+		"scale" 0.5
 	attributes
 		category "Fighter"
 		"cost" 871000
@@ -197,6 +199,8 @@ ship "'Duofez" "'Duofez (Miner)"
 shipyard "Debug"
 	"'Duofez"
 
+shipyard "Duofez"
+	"'Duofez"
 # Events
 event "EEmissiondelaytimer"
 	# Used to put delays between missions or to delay mission requests. Input number equals days needed to pass.
@@ -223,8 +227,6 @@ event "EEkorathrefugeetakeover"
 		add outfitter "Piercer Missile Restock"
 		add outfitter "Cluster Mine Restock"
 event "EEduofezimplement"
-	system ""
-	
-	system ""
-
-	system ""
+	planet "Laki Nemparu"
+		add shipyard "Duofez"
+	set "Duofez Implemented"

@@ -1,3 +1,12 @@
+# Startup implements
+mission "Duofez Implementation"
+    landing
+    invisible
+    to offer
+        not "Duofez Implemented"
+    on offer
+        event "EEduofezimplement"
+
 # Korath Missions
 mission "EE Korath Rebels Mission 1"
     minor
