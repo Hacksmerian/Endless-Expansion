@@ -101,7 +101,7 @@ mission "Korath Rebels: Broken Jump Drive Disposal"
     name "Broken Drives to <destination>"
     job
     repeat
-    description "The Korath Rebels want to dispose of their broken jump drives. They will pay you <payment> to take them to <destination>"
+    description "The Korath Rebels want to dispose of their broken jump drives. They will pay you <payment> to take <tons> to <destination>"
     source 
         government "Korath Rebels"
     destination
@@ -120,7 +120,7 @@ mission "Korath Rebels: Jump Drive Disposal"
     name "Jump Drives to <destination>"
     job
     repeat
-    description "The Korath Rebels have confiscated jump drives off of their own members and need them to be disposed of. They will pay you <payment> to take them to <destination>"
+    description "The Korath Rebels have confiscated jump drives off of their own members and need them to be disposed of. They will pay you <payment> to take <tons> to <destination>"
     source 
         government "Korath Rebels"
     destination

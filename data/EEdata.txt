@@ -96,7 +96,8 @@ outfit "Jump Drive (Broken Rebels)"
 	thumbnail "outfit/jump drive (broken)"
 	"mass" 20
 	"outfit space" -20
-	description "The workings of the jump drive are a total mystery, especially now that this drive seems completely mangled. It is no longer functional in any way. It may, however, still hold some research potential. These drives seem to have been recently broken by the Korath."
+	description "The workings of the jump drive are a total mystery, especially now that this drive seems completely mangled. It is no longer functional in any way. It may, however, still hold some research potential."
+		`	These drives seem to have been recently broken by the Korath.`
 
 # Outfitters
 outfitter "Harrison Basics"
