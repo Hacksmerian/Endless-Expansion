@@ -134,4 +134,3 @@ mission "Korath Rebels: Jump Drive Disposal"
     on complete
         payment 260000
         dialog "You land and find a Quarg who seemed to be in charge of taking your delivery. As the jump drives are unloaded you notice that the Quarg's scales have changed color ever so slightly, it seems pleased. Before you have a chance to think about it the Quarg takes the jump drives away and you're notified of your payment of <payment>"
-    

@@ -342,7 +342,7 @@ mission "EE Korath Rebels Culture 1"
         has "EE Korath Rebels Mission 10: done"
     on offer
         conversation
-            `While walking through the massive hangar and looking for some relief from the heat of the station, you see a group of Korath pushing a hovering flatbed full of broken jump drives. It seems the Korath are taking the Quarg's conditions seriously.`
+            `While walking through the massive hangar looking for some relief from the heat of the station, you see a group of Korath pushing a hovering flatbed full of broken jump drives. It seems the Korath are taking the Quarg's conditions seriously.`
                 decline
         set "EE Korath Rebels Jump Drive Disposal Jobs"
 
@@ -353,15 +353,244 @@ mission "EE Korath Rebels Culture 1"
 
 # Remnant Missions
 
-mission "EE Alpha Advancement Warning 1"
+mission "EE Alpha Advancement Warning"
     name "Warn The Remnant About the Alphas"
     description "You've discovered that the Alphas have been acquiring alien technology and influencing alien species. You should go and inform the Remnant."
     source "Viminal"
     to offer
         has "Wanderers: Sestor: Final: Patched: done"
-        has "Remnant: Cognizance 39: done"
-        has "Remnant: Learn Sign Follow Up: declined"
-        not "missiondelay"
+        has "Remnant: Cognizance 38: done"
+    on offer
+        set "EE Remnant Tech Retrieval 1"
+        conversation
+            `After inputting the code into your Remnant license, you land on the landing pad. Landing here, you recall your recent battles with the Alphas. Do you want to inform the Remnant about it?`
+            choice
+                `   (Not now.)`
+                    defer
+                `   (Yes.)`
+            `   You contact the port authorities, requesting to see Prefect Chilia. They tell you to wait for her outside your ship and after waiting 20 minutes, she finally appears.`
+            `   "Captain <last>, I assume you have something important to report?" You explain quickly, or at least as quickly as your fingers can move, about your battles with the Alphas and how they've been utilizing a range of alien's technologies. As you explain Prefect Chilia's frown deepens until you end your story with how you defeated their Kor Sestor fleets. "I see, this is grave news indeed Captain <last>. If the Alphas are getting their hands on alien technology, we may fall behind due to not knowing what these other species possess.`
+            `   He thinks for a moment before continuing, "I need to speak with the other prefects about this. I will inform you on any course of action we take." You both sign farewell before you head off to the spaceport to find some lunch.`
+                decline
+mission "EE Remnant Tech Retrieval"
+    name "Retrieve Alien Tech"
+    description "Prefect Chilia has asked you to find alien tech that you believe would give them valuable insights and take them to Taely on Viminal."
+    source "Viminal"
+    to offer
+        has "EE Remnant Tech Retrieval 1"
+        not "EE Remnant Tech Retrieved"
     on offer
         conversation
-            ``
+            `As you're landing you're notified by the port authority that Prefect Chilia would like to meet with you in the spaceport cafeteria. You make your way there and find Prefect Chilia sitting at a table with Taely, who waves at you. You quickly make your way over and sign a hello before sitting down.`
+            `   "It is fortunate that you've come Captain <last>," Prefect Chilia signs, "we've come to a decision regarding the Alpha situation."`
+            `   "Would you be willing to gather alien technology for us? You'll be compensated of course." Taely signs quickly, her face lighting up. You could only assume that she's very excited to get her hands on some new alien technology.`
+            choice
+                `   "Sure, I can do that."`
+                    goto next
+                `   "No, sorry."`
+                    decline
+            label next
+            `   "Thank you <first>, if you find anything that might interest us bring it to me here on Viminal." Taely signs, her face beaming.`
+            choice
+                `   "What kind of tech would you guys be interested in?"`
+                    goto next2
+            label next2
+            `   "Anything you think would be useful. Although, if you're looking for somewhere to start looking, I'm sure the Hai would have some interesting technology." Prefect Chilia would nod slightly at Taely's suggestion before beginning to sign.`
+            `   "And while we don't care where you get it, we hope you won't do anything stupid on our behalf." After that you all get food before saying your goodbyes.`
+                accept
+    to complete
+        never
+    to fail
+        has "EE Remnant Tech Retrieved"
+    on fail
+        clear "EE Remnant Tech Retrieval: failed"
+        set "EE Remnant Tech Retrieval: done"
+    on abort
+        # Empty, just here so aborting this mission doesn't trigger the failure action.
+
+mission "EE Remnant Tech Retrieval (Tracker Pod)"
+    landing
+    name "Bring two Tracker Pods to <destination>"
+    description "Taely has asked you to bring two Tracker Pods to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Hai Tracker Pod"
+        conversation
+            `You have a Hai Tracker Pod with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You go to Taely's hangar, carrying the Hai Tracker Pod behind you on a hover pallet. She puts down a set of tools before coming over to examine what you brought her.`
+            `   "This is one of the weapons that the Alpha carrier had correct?" You sign in the affirmative and she looks at it closer. "A very interesting design, I imagine it is quite a nightmare for anti missile turrets to handle. I have a team on <planet> that is working on ballistic weapons, could you take two of these there as well as 50 of its trackers? We will compensate you <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Tracker Pods that Taely requested. Go buy two Tracker Pods before returning."
+    on complete
+        outfit "Hai Tracker Pod" -2
+        outfit "Hai Tracker" -50
+        payment 1540000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `On <planet>, you follow the instructions you were given for the ballistics lab and land on the designated landing pad while contacting the lab that you were arriving. A small team of Remnant quickly come out and begin to unload the Hai Tracker Pods and its ammunition, handing you your payment of <payment> before hauling the weapons inside.`
+mission "EE Remnant Tech Retrieval (Ion Cannon)"
+    landing
+    name "Bring two Ion Cannons to <destination>"
+    description "Taely has asked you to bring two Ion Cannons to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Ion Cannon"
+        conversation
+            `You have an Ion Cannon with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You find Taely trying to cram another ramscoop into an Albatross when you enter the hangar. She notices you before quickly rappelling down and following you to your ship, where you show her the Ion Cannon.`
+            `   "This is one of the weapons you said that the Alpha carrier had, correct?" She signs, which you reply in the affirmative. "A very sleek design to be sure. Take two of them to a lab on <planet>, and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Ion Cannons that Taely requested. Go buy two Ion Cannons before returning."
+    on complete
+        outfit "Ion Cannon" -2
+        payment 3200000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `When you land on the landing pad outside the lab, a few Remnant engineers come out and hand you your payment of <payment>. They then quickly return inside, excitedly signing to each other.`
+mission "EE Remnant Tech Retrieval (Phantom Pallet)"
+    landing
+    name "Bring two Phantom Pallet to <destination>"
+    description "Taely has asked you to bring two Phantom Pallet to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Phantom Pallet"
+        conversation
+            `You have a Phantom Pallet with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You go to Taely's hangar to find her working on a modified Fire-Lance. She quickly sets her tools aside and follows you to your ship, where you show her the Phantom Pallet. She raises an eyebrow, a little confused until you explain its full capabilities.`
+            `   "An interesting alternative to Interference Plating, if nothing else it would be good to study how best to work around this kind of scanner fooling. Take two of them to a lab on <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Phantom Pallets that Taely requested. Go buy two Phantom Pallets before returning."
+    on complete
+        outfit "Phantom Pallet" -2
+        payment 1100000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `Before you've even landed there are already engineers waiting for you. They quickly unload the Phantom Pallets you brought and pay you <payment> before bringing them inside the lab.`
+mission "EE Remnant Tech Retrieval (Holovid Zone)"
+    landing
+    name "Bring two Holovid Zones to <destination>"
+    description "Taely has asked you to bring two Holovid Zones to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Holovid Zone"
+        conversation
+            `You have a Holovid Zone with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You enter Taely's hangar to find her performing percussive maintenance on a particularly stubborn Thermal Repeater. When she notices you she immediately drops what she's doing and follows you to your ship where you show her the Holovid Zone.`
+            `   "You say this is a common luxury on Hai ships? Interesting. This could have military potential, and it would be good to be able to identify it in future. Take two of these to a lab on <planet>, you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Holovid Zones that Taely requested. Go buy two Holovid Zones before returning."
+    on complete
+        outfit "Holovid Zone" -2
+        payment 3300000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `You go to the specified coordinates for the lab, alerting the lab ahead of time. Several engineers are waiting for you and quickly unload the Holovid Zones, handing you your payment of <payment> before heading inside.`
+mission "EE Remnant Tech Retrieval (Pulse Cannon)"
+    landing
+    name "Bring two Pulse Cannons to <destination>"
+    description "Taely has asked you to bring two Pulse Cannons to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Pulse Cannon"
+        conversation
+            `You have a Pulse Cannon with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You walk into Taely's hangar to find her fiddling with a hologram display before turning to face you. She then quickly follows you to your ship, where you show her the Pulse Cannon.`
+            `   "This is the standard weapon used by the Hai, right? It doesn't appear to be ground breaking but it's good to know what our enemy might have in the future. Take two of these to our lasers laboratory on <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Pulse Cannons that Taely requested. Go buy two Pulse Cannons before returning."
+    on complete
+        outfit "Pulse Cannon" -2
+        payment 2100000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `   You land outside the lasers lab and the engineers unload the Pulse Cannons, handing you your payment of <payment>.`

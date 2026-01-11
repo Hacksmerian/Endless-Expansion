@@ -52,3 +52,10 @@ v.0.1.18
 1/10/2026
 	
 	Added 'Duofez mining fleets to all Kor Efret Systems
+
+v0.2.0
+1/11/2026
+	
+	Added new Remnant Missions (Requires Sestor storyline and Cognizance storyline to be complete. Starts on Viminal. Currently only has missions for certain Hai tech, more will be added.)
+
+
