@@ -1,6 +1,6 @@
 system DebugSystem
 	"display name" Debug System
-	pos -1000 -1000
+	pos -1000 -500
 	government Debug
 	attributes "hai"
 	ramscoop

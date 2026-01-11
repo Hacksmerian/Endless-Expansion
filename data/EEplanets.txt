@@ -25,7 +25,6 @@ planet Debug
 	outfitter "Kraz Advanced"
 	outfitter "FW Security"
 	shipyard "Debug"
-	shipyard "Kestrel"
 	security 1
 	tribute 1000000
 		fleet "deathfleet" 1

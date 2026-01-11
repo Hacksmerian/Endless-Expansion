@@ -33,7 +33,7 @@ outfit "Extreme Temperature Insulation"
 	description "This technology was developed by the Harrison Research Group for work requiring close proximity to stars."
 
 outfit "Blink Drive"
-	"cost" 1000000
+	"cost" 100000000
 	# change blink drive model in future
 	thumbnail "outfit/jump drive"
 	"mass" 20
@@ -43,7 +43,7 @@ outfit "Blink Drive"
 	"jump drive" 1 
 	"jump range" 500
 	"jump speed" .8
-	description `This device operates under the same principles as the jump drive, however the range of the device is far greater than any other hyperdrive in the known universe.`
+	description `This device operates under the same principles as the jump drive, however the range of the device is far greater than any other hyperdrive in the known universe. It's origins are unknown but it seems to blink faster the further north you go.`
 
 outfit "Turret Mount Expansion"
 	# Doesn't function, don't bother trying to use it. Couldn't figure out a way to add new turrets to sprites. Yet.
@@ -199,6 +199,7 @@ ship "'Duofez" "'Duofez (Miner)"
 # Shipyards
 shipyard "Debug"
 	"'Duofez"
+	"Kestrel"
 
 shipyard "Duofez"
 	"'Duofez"
