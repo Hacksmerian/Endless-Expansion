@@ -229,6 +229,24 @@ event "EEkorathrefugeetakeover"
 		add outfitter "Piercer Missile Restock"
 		add outfitter "Cluster Mine Restock"
 event "EEduofezimplement"
+	system "Kashikt"
+		add fleet
+			names "korath"
+			personality timid mining plunders harvests
+			variant
+				"'Duofez (miner)" 10
+	system "Sevrelect"
+		add fleet
+			names "korath"
+			personality timid mining plunders harvests
+			variant
+				"'Duofez (miner)" 10
+	system "Sumprast"
+		add fleet
+			names "korath"
+			personality timid mining plunders harvests
+			variant
+				"'Duofez (miner)" 10
 	planet "Laki Nemparu"
 		add shipyard "Duofez"
 	set "Duofez Implemented"

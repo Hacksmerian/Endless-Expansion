@@ -351,4 +351,17 @@ mission "EE Korath Rebels Culture 1"
 
 
 
-#
+# Remnant Missions
+
+mission "EE Alpha Advancement Warning 1"
+    name "Warn The Remnant About the Alphas"
+    description "You've discovered that the Alphas have been acquiring alien technology and influencing alien species. You should go and inform the Remnant."
+    source "Viminal"
+    to offer
+        has "Wanderers: Sestor: Final: Patched: done"
+        has "Remnant: Cognizance 39: done"
+        has "Remnant: Learn Sign Follow Up: declined"
+        not "missiondelay"
+    on offer
+        conversation
+            ``

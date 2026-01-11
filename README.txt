@@ -47,3 +47,8 @@ v.0.1.17
 1/10/2026
 
 	Implemented the 'Duofez (model made by K.ai), it is purchasable from the Kor Efret.
+
+v.0.1.18
+1/10/2026
+	
+	Added 'Duofez mining fleets to all Kor Efret Systems
