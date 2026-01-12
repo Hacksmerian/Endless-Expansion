@@ -61,7 +61,7 @@ outfit "Twin Digger Mining Beam"
 	series "Guns"
 	index 04070
 	cost 629000
-	thumbnail "EEoutfit/twin_digger"
+	thumbnail "EEoutfit/double_digger"
 	"mass" 20
 	"outfit space" -20
 	"weapon capacity" -18
@@ -149,7 +149,7 @@ ship "'Duofez"
 	plural "'Duofezes"
 	sprite "EEship/duofez"
 		"scale" 0.5
-	thumbnail "EEship/duofez_thumbnail"
+	thumbnail "EEship/Duofez Thumbnail"
 		"scale" 0.5
 	attributes
 		category "Fighter"
@@ -229,6 +229,11 @@ event "EEkorathrefugeetakeover"
 		add outfitter "Piercer Missile Restock"
 		add outfitter "Cluster Mine Restock"
 event "EEduofezimplement"
+	planet "Laki Nemparu"
+		add shipyard "Duofez"
+	set "Duofez Implemented"
+event "EEduofezfleetimplement"
+	set "Duofez Fleet Implemented"
 	system "Kashikt"
 		add fleet
 			names "korath"
@@ -247,6 +252,3 @@ event "EEduofezimplement"
 			personality timid mining plunders harvests
 			variant
 				"'Duofez (miner)" 10
-	planet "Laki Nemparu"
-		add shipyard "Duofez"
-	set "Duofez Implemented"

@@ -59,3 +59,14 @@ v0.2.0
 	Added new Remnant Missions (Requires Sestor storyline and Cognizance storyline to be complete. Starts on Viminal. Currently only has missions for certain Hai tech, more will be added.)
 
 
+v0.2.1
+1/11/2026
+
+	Implemented Duofez fleets to mine within Kor Efret space. (If using an old version of this plugin, depart and land and the changes should be made.)
+
+	Added more Remnant tech missions (Heliarch/Coalition Tech this time, find them :] )
+
+	Updated Twin Digger Mining Beam's thumbnail image
+
+	Updated Duofez's thumbnail image
+

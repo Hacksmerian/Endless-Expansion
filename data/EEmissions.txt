@@ -6,7 +6,13 @@ mission "Duofez Implementation"
         not "Duofez Implemented"
     on offer
         event "EEduofezimplement"
-
+mission "Duofez Fleet Implementation"
+    landing
+    invisible
+    to offer
+        not "Duofez Fleet Implemented"
+    on offer
+        event "EEduofezfleetimplement"
 # Korath Missions
 mission "EE Korath Rebels Mission 1"
     minor
@@ -594,3 +600,263 @@ mission "EE Remnant Tech Retrieval (Pulse Cannon)"
         set "EE Remnant Tech Retrieved"
         conversation
             `   You land outside the lasers lab and the engineers unload the Pulse Cannons, handing you your payment of <payment>.`
+mission "EE Remnant Tech Retrieval (Decoy Plating)"
+    landing
+    name "Bring two Decoy Plating to <destination>"
+    description "Taely has asked you to bring two Decoy Plating to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Decoy Plating"
+        conversation
+            `You have some Decoy Plating with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You step into Taely's hangar, finding her in the middle of lining a Puffin with gas. She quickly follows you to your ship where you show her the Decoy Plating.`
+            `   "So this plating can deflect a scanner's ray to other ships nearby? A fascinating approach, and it surely has various military applications as well. Take two of these to a lab on <planet>, you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Decoy Plating that Taely requested. Go buy two Decoy Plating before returning."
+    on complete
+        outfit "Decoy Plating" -2
+        payment 2100000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `You land on the landing pad outside the lab, where several Remnant are waiting for you. They hand you your payment of <payment> before heading inside.`
+mission "EE Remnant Tech Retrieval (Shield Refractor Module)"
+    landing
+    name "Bring two Shield Refactor Modules to <destination>"
+    description "Taely has asked you to bring two Shield Refactor Module to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Shield Refactor Module"
+        conversation
+            `You have a Shield Refactor Module with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You go to Taely's hangar to find her fiddling with a Systems Core. She notices you and puts her tools aside before following you to your ship, where you show her the Shield Refactor Module.`
+            `   "A fascinating technology this is, quite a valuable find Captain <last>. I want to take a look at this one personally. Take two of these to my lab on <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Shield Refactor Module that Taely requested. Go buy two Shield Refactor Module before returning."
+    on complete
+        outfit "Shield Refactor Module" -2
+        payment 18800000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `  As you land you notify Taely's assistants of your arrival and they meet you at the lab's entrance. As they haul the Shield Refactor Modules off your ship you're able to see inside the lab for a moment. You could catch a glimpse of a few racks of what seem to be alien rifles that are rotting. The lab assistants quickly hand you your payment of <payment> before you return to your ship.`
+mission "EE Remnant Tech Retrieval (Bombardment Cannon)"
+    landing
+    name "Bring two Bombardment Cannons to <destination>"
+    description "Taely has asked you to bring two Bombardment Cannons to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Bombardment Cannon"
+        conversation
+            `You have a Bombardment Cannon with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You find Taely in the cafeteria, chatting with other engineers before she notices you. She exits the conversation before following you to your ship, where you show her the Bombardment Cannon.`
+            `   "And you're saying this was made specifically for civilians of this group to fight the Quarg? I pity anyone who intends on fighting them, but this weapon will nonetheless give us some insights. Take two of these to a lab in <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Bombardment Cannons that Taely requested. Go buy two Bombardment Cannons before returning."
+    on complete
+        outfit "Bombardment Cannon" -2
+        payment 5600000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `You land outside the lab and unload the Bombardment Cannons. An engineer hands you your payment of <payment> before quickly taking the weapons into the lab.`
+mission "EE Remnant Tech Retrieval (Finisher Pod)"
+    landing
+    name "Bring two Finisher Pods to <destination>"
+    description "Taely has asked you to bring two Finisher Pods and 50 Finisher Torpedoes to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Finisher Pod"
+        conversation
+            `You have a Finisher Pod with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You head to Taely's hangar to find her fiddling with what appears to be a rusting robot. She notices you and sets her tools aside before following you to your ship, where you show her the Finisher Pod.`
+            `   "Quite the formidable weapon you've brought me <first>, you said this is a weapon used by the group who fought the Quarg? Fascinating. Take two of these and 50 of the torpedoes to our ballistics lab on <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Finisher Pods that Taely requested. Go buy two Finisher Pods before returning."
+    on complete
+        outfit "Finisher Pod" -2
+        outfit "Finisher Torpedoes" -50
+        payment 10300000
+        set "EE Remnant Tech Retrieved"
+        conversation
+        `You alert the lab of your arrival and find several engineers waiting for you when you land. They quickly unload the Finisher Pods and its ammunition before handing you your payment of <payment>.`
+mission "EE Remnant Tech Retrieval (Heliarch Attractor)"
+    landing
+    name "Bring two Heliarch Attractors to <destination>"
+    description "Taely has asked you to bring two Heliarch Attractor to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Heliarch Attractor"
+        conversation
+            `You have a Heliarch Attractor with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You head to Taely's hangar and find her working with several alien weapons that appear to be crumbling apart. She notices you and quickly follows you to your ship, where you show her the Heliarch Attractor.`
+            `   "An interesting approach to preventing escapees. I look forward to seeing how it squares up to the Korath's equipment. Take two of these to <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Heliarch Attractors that Taely requested. Go buy two Heliarch Attractors before returning."
+    on complete
+        outfit "Heliarch Attractor" -2
+        payment 10200000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `You land at on the laboratory's landing pad, where several engineers wait for the ship hatch to open. You're handed your payment of <payment> as they unload the equipment.`
+mission "EE Remnant Tech Retrieval (Heliarch Repulsor)"
+    landing
+    name "Bring two Heliarch Repulsors to <destination>"
+    description "Taely has asked you to bring two Heliarch Repulsors to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Heliarch Repulsor"
+        conversation
+            `You have a Heliarch Repulsor with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You find Taely inside her hanger messing with a broken jump drive. It sparks for a moment before she finally gives up and turns to you, following you out to your ship as you show her the Heliarch Repulsor.`
+            `   "An interesting design, it's always interesting to see another species' take on tractor beams. Take two of these to a lab on <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Heliarch Repulsors that Taely requested. Go buy two Heliarch Repulsors before returning."
+    on complete
+        outfit "Heliarch Repulsor" -2
+        payment 10200000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `You land at the lab's designated landing pad and watch as the engineers unload the Heliarch Repulsors. They hand you your payment of <payment> before heading inside.`
+mission "EE Remnant Tech Retrieval (Ion Rain Gun)"
+    landing
+    name "Bring two Ion Rain Guns to <destination>"
+    description "Taely has asked you to bring two Ion Rain Guns to <destination> so that the Remnant can study them further."
+    source "Viminal"
+    destination
+        government "Remnant"
+        attributes outfitter
+        not 
+            planet "Ssil Vida"
+        not attributes "requires: gaslining"
+        not distance 0
+    to offer
+        or
+            has "EE Remnant Tech Retrieval: active"
+            has "EE Remnant Tech Retrieval: done"
+    on offer
+        require "Ion Rain Gun"
+        conversation
+            `You have an Ion Rain Gun with you, do you want to show it to Taely?`
+            choice
+                `   (Now now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+            label next
+            `   You enter Taely's hangar to find her working on a replica of a Plasma Cannon made out of various of the Remnant's primary materials. She notices you and sets her tools down, following you to your ship where you shower her the Ion Rain Gun.`
+            `   "Another form of Ion weaponry? It's always interesting to see how other groups and species tackle the same idea. Take two of these to our laser lab on <planet> and you'll be compensated <payment>."`
+                accept
+    on visit
+        dialog "You have returned to <planet> but you don't have the two Ion Rain Guns that Taely requested. Go buy two Ion Rain Guns before returning."
+    on complete
+        outfit "Ion Rain Gun" -2
+        payment 6400000
+        set "EE Remnant Tech Retrieved"
+        conversation
+            `You land on the designated landing pad to the laser lab, where several engineers are waiting. They hand you your payment of <payment> before unloading the weapons off your ship.`
