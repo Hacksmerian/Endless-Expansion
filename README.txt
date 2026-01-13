@@ -4,6 +4,8 @@ Adds multiple Korath related missions. (Complete the Sestor storyline first.)
 
 Adds new Korath faction and Korath related jobs.
 
+Adds new Remnant tech missions for different alien species. (Finish Sestor storyline and Cognizence first)
+
 
 
 
