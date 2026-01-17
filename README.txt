@@ -6,6 +6,8 @@ Adds new Korath faction and Korath related jobs.
 
 Adds new Remnant tech missions for different alien species. (Finish Sestor storyline and Cognizence first)
 
+Adds Remnant missions related to the Avgi and Aberrant.
+
 
 
 
@@ -72,3 +74,5 @@ v0.2.1
 
 	Updated Duofez's thumbnail image
 
+
+v0.2.2
