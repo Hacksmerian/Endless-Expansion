@@ -6,7 +6,6 @@ Adds new Korath faction and Korath related jobs.
 
 Adds new Remnant tech missions for different alien species. (Finish Sestor storyline and Cognizence first)
 
-Adds Remnant missions related to the Avgi and Aberrant. (Finish Cognizence and Twilight Escape first)
 
 
 
@@ -78,3 +77,5 @@ v0.2.1
 
 
 v0.2.2
+	
+	Fixed mission description for the Tracker Pod tech mission to state that you need 50 tracker pod ammo.

@@ -417,7 +417,7 @@ mission "EE Remnant Tech Retrieval"
 mission "EE Remnant Tech Retrieval (Tracker Pod)"
     landing
     name "Bring two Tracker Pods to <destination>"
-    description "Taely has asked you to bring two Tracker Pods to <destination> so that the Remnant can study them further."
+    description "Taely has asked you to bring two Tracker Pods and 50 of its ammo to <destination> so that the Remnant can study them further."
     source "Viminal"
     destination
         government "Remnant"
@@ -860,3 +860,42 @@ mission "EE Remnant Tech Retrieval (Ion Rain Gun)"
         set "EE Remnant Tech Retrieved"
         conversation
             `You land on the designated landing pad to the laser lab, where several engineers are waiting. They hand you your payment of <payment> before unloading the weapons off your ship.`
+mission "EE Remnant Avgi Information"
+    landing
+    source "Viminal"
+    waypoint "Patir"
+    waypoint "Octet"
+    waypoint "Aki'il"
+    waypoint "Septet"
+    waypoint "Duet"
+    waypoint "Trio"
+    waypoint "Quartet"
+    waypoint "Quintet"
+    waypoint "Sextet"
+    waypoint "Nonet"
+    waypoint "Decet"
+    to offer
+        has "Avgi: Twilight Escape 3: done"
+        has "Remnant: Cognizance 38: done"
+    on offer
+        conversation
+            `You land in the Remnant spaceport, still considering whether or not you should bring spices to sell when you remember that the Remnant probably don't know about about what is going on in the area west of the Graveyard.`
+            `   Do you want to tell them about the Avgi and their ongoing conflict with the Aberrant?`
+            choice
+                `   (Not now.)`
+                    defer
+                `   (Yes.)`
+                    goto next
+                label next
+                `   You happen to run into Prefect Chilia in the spaceport cafeteria, piling a tray high with food. You almost forget that the Remnant have a strange parasite living on them at all times and they need to be fed too. You quickly push that from your mind as you sign to Chilia, telling him that you have something important to report. You both find a table and sit down.`
+                `   "Captain <last>, I assume you have something new to inform us about?"`
+                choice
+                    `   "I found a new alien species east of The Graveyard, and they're fighting against bio ships with Ka'het outfits."`
+                        goto next
+                label next
+                `   His brow furrows slightly in slight confusion and surprise, a single finger tapping on the table before he seems to come to a decision.`
+                `   "I see, can you show me your ship's star map?" You quickly show him your star map on your PDA, highlighting the systems that the Avgi occupy and the strange wasteland of shrouded systems.`
+                `   "Hm, I'll have to talk to the other Prefects about how we'll want to go about this, until then I'd like you to take readings in these systems here." He signs as he traces his finger around the Decet cluster. "By the time you return, we should of come to a decision."`
+                `   You nod and you both sign farewell as you walk back to your ship.`
+                    accept
+    
