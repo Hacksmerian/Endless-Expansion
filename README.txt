@@ -6,7 +6,9 @@ Adds new Korath faction and Korath related jobs.
 
 Adds new Remnant tech missions for different alien species. (Finish Sestor storyline and Cognizence first)
 
-Adds Remnant missions related to the Avgi and Aberrant.
+Adds Remnant missions related to the Avgi and Aberrant. (Finish Cognizence and Twilight Escape first)
+
+
 
 
 
